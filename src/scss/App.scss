@@ -1,0 +1,23 @@
+$primary: #58a4b0;
+$secondary: #373f51;
+$light: #d8dbe2;
+$dark: #363636;
+
+$mobile-wide: 768px;
+$mobile: 559px;
+$desktop: 1200px;
+
+@import "components/buttons";
+@import "layouts/about";
+@import "layouts/footer";
+@import "layouts/header";
+@import "layouts/projects";
+
+body {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+}
+
+.App {
+}
