@@ -9,6 +9,11 @@ import Footer from "./components/Footer";
 
 function App() {
   const [page, setPage] = useState("header");
+  const [prevPage, setPrevPage] = useState("");
+
+  const front = { zIndex: 9 };
+  const back = { zIndex: 2 };
+  const disable = { zIndex: 0 };
 
   const changePage = (pageName) => {
     setPage(pageName);
@@ -16,11 +21,35 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar changePage={changePage} />
-      {page === "header" ? <Header /> : null}
-      {page === "about" ? <About /> : null}
-      {page === "projects" ? <Projects /> : null}
-      {page === "footer" ? <Footer /> : null}
+      <Navbar
+        changePage={changePage}
+        setPrevPage={setPrevPage}
+        prevPage={page}
+      />
+      {page === "header" && <Header customStyle={front} />}
+      {prevPage === "header" ? (
+        <Header customStyle={back} />
+      ) : (
+        <Header customStyle={disable} />
+      )}
+      {page === "about" && <About customStyle={front} />}
+      {prevPage === "about" ? (
+        <About customStyle={back} />
+      ) : (
+        <About customStyle={disable} />
+      )}
+      {page === "projects" && <Projects customStyle={front} />}
+      {prevPage === "projects" ? (
+        <Projects customStyle={back} />
+      ) : (
+        <Projects customStyle={disable} />
+      )}
+      {page === "footer" && <Footer customStyle={front} />}
+      {prevPage === "footer" ? (
+        <Footer customStyle={back} />
+      ) : (
+        <Footer customStyle={disable} />
+      )}
     </div>
   );
 }

@@ -1,23 +1,51 @@
 import React, { useState, useEffect } from "react";
+import { useSpring, animated } from "react-spring";
 
 function Nav(props) {
   const [count, setCount] = useState(0);
   const pages = ["header", "about", "projects", "footer"];
+  const animation = useSpring({
+    to: { right: "80px", opacity: 1 },
+    from: { right: "0px", opacity: 0 },
+    delay: 1000,
+  });
 
   useEffect(() => {
     props.changePage(pages[count]);
+
+    const handleArrows = (event) => {
+      // When up arrow key pressed
+      if (event.keyCode === 38) {
+        count <= pages.length - 1 && count > 0 && setCount(count - 1);
+        props.setPrevPage(props.prevPage);
+      }
+      // When down arrow key pressed
+      if (event.keyCode === 40) {
+        count >= 0 && count < pages.length - 1 && setCount(count + 1);
+        props.setPrevPage(props.prevPage);
+      }
+    };
+    window.addEventListener("keydown", handleArrows);
+
+    return () => {
+      window.removeEventListener("keydown", handleArrows);
+    };
   });
 
   return (
-    <div className={`nav ${count === 0 ? "" : "dark"}`}>
+    <animated.div
+      className={`nav ${count === 0 ? "" : "dark"}`}
+      style={animation}
+    >
       <div
         className="btn-prev"
         onClick={() => {
           count <= pages.length - 1 && count > 0 && setCount(count - 1);
+          props.setPrevPage(props.prevPage);
         }}
       >
         <div className="arrow-up"></div>
-        PREV
+        <span>PREV</span>
       </div>
 
       <div className={`circle ${count === 0 ? "active" : ""}`}></div>
@@ -29,12 +57,13 @@ function Nav(props) {
         className="btn-next"
         onClick={() => {
           count >= 0 && count < pages.length - 1 && setCount(count + 1);
+          props.setPrevPage(props.prevPage);
         }}
       >
-        NEXT
+        <span>NEXT</span>
         <div className="arrow-down"></div>
       </div>
-    </div>
+    </animated.div>
   );
 }
 

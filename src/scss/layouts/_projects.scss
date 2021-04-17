@@ -3,7 +3,59 @@
   width: 100%;
   background-color: $light;
   color: $dark;
-  font-size: 4rem;
-
+  position: absolute;
+  overflow-y: scroll;
   @extend .grid-center;
+
+  .container-proj {
+    height: 80vh;
+    width: 70%;
+    margin-top: 70px;
+
+    &:last-child {
+      padding-bottom: 70px;
+    }
+
+    @extend .grid-center;
+    gap: 5px 5px;
+    grid-template:
+      "b b a a" 0.5fr
+      "c c a a" 1fr
+      "c c a a" 0.5fr
+      "d d a a" 0.5fr;
+
+    .proj-vid,
+    .proj-title,
+    .proj-desc,
+    .proj-tech {
+      width: 100%;
+      height: 100%;
+      @extend .grid-center;
+    }
+
+    .proj-vid {
+      grid-area: a;
+      background-color: gray;
+    }
+    .proj-title {
+      grid-area: b;
+      background-color: yellow;
+    }
+    .proj-desc {
+      grid-area: c;
+      background-color: violet;
+    }
+    .proj-tech {
+      grid-area: d;
+      background-color: greenyellow;
+    }
+  }
+
+  .proj-divider {
+    height: 0.5px;
+    width: 62%;
+    margin-top: 70px;
+    background-color: $dark;
+    border: 0.5px solid $dark;
+  }
 }

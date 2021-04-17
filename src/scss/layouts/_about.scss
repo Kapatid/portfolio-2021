@@ -3,7 +3,39 @@
   width: 100%;
   background-color: $light;
   color: $dark;
-  font-size: 4rem;
-
+  position: absolute;
   @extend .grid-center;
+
+  .container-about {
+    height: 80vh;
+    width: 70%;
+
+    @extend .grid-center;
+    gap: 5px 5px;
+    grid-template:
+      "a a b b" 0.3fr
+      "a a c c" 1fr
+      "a a c c" 1fr;
+
+    .about-desc,
+    .about-pic,
+    .about-title {
+      width: 100%;
+      height: 100%;
+      @extend .grid-center;
+    }
+
+    .about-pic {
+      grid-area: a;
+      background-color: gray;
+    }
+    .about-title {
+      grid-area: b;
+      background-color: yellow;
+    }
+    .about-desc {
+      grid-area: c;
+      background-color: violet;
+    }
+  }
 }

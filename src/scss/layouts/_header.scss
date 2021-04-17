@@ -1,11 +1,10 @@
 .header {
   height: 100vh;
   width: 100%;
-  margin: 0px 30px 0px 30px;
   background-color: $secondary;
   color: $light;
   font-size: 4rem;
-
+  position: absolute;
   @extend .grid-center;
 
   .p1 {
@@ -15,7 +14,6 @@
 
     .s1 {
       font-weight: bold;
-      color: $yellow;
     }
 
     .s2 {

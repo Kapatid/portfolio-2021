@@ -7,6 +7,10 @@ $desktop: 1200px;
   place-items: center;
 }
 
+.go-to-back {
+  z-index: 5;
+}
+
 @import "abstracts/colors";
 @import "abstracts/fonts";
 @import "components/buttons";
@@ -25,5 +29,23 @@ body {
   height: 100vh;
   width: 100%;
 
+  @extend .grid-center;
+}
+
+.header,
+.about,
+.projects,
+.footer {
+  box-shadow: 0 1.3px 1.6px rgba(0, 0, 0, 0.081),
+    0 4.2px 5.4px rgba(0, 0, 0, 0.119), 0 19px 24px rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+  height: 100vh;
+  width: 100%;
+  background-color: $light;
+  color: $dark;
+  font-size: 4rem;
+  position: absolute;
   @extend .grid-center;
 }
