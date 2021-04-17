@@ -7,6 +7,10 @@
   position: absolute;
   @extend .grid-center;
 
+  @include media-max($xs) {
+    font-size: 2rem;
+  }
+
   .p1 {
     width: 50%;
     font-family: $raleway;

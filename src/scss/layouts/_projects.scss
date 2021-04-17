@@ -9,53 +9,133 @@
 
   .container-proj {
     height: 80vh;
-    width: 70%;
+    width: 60%;
     margin-top: 70px;
+    padding: 50px 0px 50px 0px;
+    border-bottom: 1px solid $dark;
+
+    @include media-max($xs) {
+      margin-top: 30px;
+      height: 90vh;
+      width: 100%;
+      height: 100vh;
+    }
 
     &:last-child {
       padding-bottom: 70px;
     }
 
     @extend .grid-center;
-    gap: 5px 5px;
+    gap: 0px 5px;
     grid-template:
-      "b b a a" 0.5fr
-      "c c a a" 1fr
-      "c c a a" 0.5fr
-      "d d a a" 0.5fr;
+      "a a a a" 0.5fr
+      "b b b b" 0.2fr
+      "c c c c" 1.8fr
+      "d d d d" 1fr;
 
-    .proj-vid,
-    .proj-title,
     .proj-desc,
-    .proj-tech {
-      width: 100%;
-      height: 100%;
-      @extend .grid-center;
+    .proj-tech,
+    .proj-github {
+      width: 60%;
+      height: fit-content;
+
+      @include media-max($xs) {
+        width: 90%;
+      }
     }
 
     .proj-vid {
+      width: 60%;
       grid-area: a;
-      background-color: gray;
-    }
-    .proj-title {
-      grid-area: b;
-      background-color: yellow;
+
+      @include media-max($xs) {
+        width: 90%;
+      }
+
+      video {
+        width: 100%;
+        height: auto;
+      }
     }
     .proj-desc {
-      grid-area: c;
-      background-color: violet;
+      grid-area: b;
+      display: grid;
     }
     .proj-tech {
+      grid-area: c;
+
+      .tech {
+        cursor: pointer;
+        height: fit-content;
+        width: fit-content;
+        box-shadow: 0 0px 1.3px rgba(0, 0, 0, 0.09),
+          0 0px 10px rgba(0, 0, 0, 0.18);
+        font-size: 0.9rem;
+        font-weight: 600;
+        padding: 8px 16px 8px 16px;
+        margin: 6px 6px 6px 6px;
+        background-color: $light;
+        border-radius: 30px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      .html-css {
+        color: $light;
+        background-color: rgb(221, 75, 37);
+        background: linear-gradient(
+          133deg,
+          rgba(221, 75, 37, 1) 35%,
+          rgba(37, 75, 221, 1) 84%
+        );
+      }
+
+      .javascript {
+        background-color: #efd81d;
+      }
+
+      .php {
+        background-color: #7377ad;
+        color: $light;
+      }
+
+      .mysql {
+        background-color: #005d85;
+        color: $light;
+      }
+
+      .blade {
+        color: $light;
+        background: rgb(221, 75, 37);
+      }
+
+      .laravel {
+        background-color: #ff2d20;
+        color: $light;
+      }
+
+      .react {
+        background-color: #61dafb;
+        color: #282c34;
+      }
+
+      .sass {
+        background-color: #cf649a;
+        color: $light;
+      }
+    }
+    .proj-github {
       grid-area: d;
-      background-color: greenyellow;
+      mark {
+        padding: 0px 6px 0px 6px;
+      }
     }
   }
 
   .proj-divider {
     height: 0.5px;
     width: 62%;
-    margin-top: 70px;
-    background-color: $dark;
-    border: 0.5px solid $dark;
+    margin-top: 3rem;
+    background-color: rgba(0, 0, 0, 0.123);
   }
 }

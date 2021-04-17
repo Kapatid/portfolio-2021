@@ -8,34 +8,46 @@
 
   .container-about {
     height: 80vh;
-    width: 70%;
+    width: 60%;
 
     @extend .grid-center;
     gap: 5px 5px;
     grid-template:
-      "a a b b" 0.3fr
-      "a a c c" 1fr
-      "a a c c" 1fr;
-
-    .about-desc,
-    .about-pic,
-    .about-title {
-      width: 100%;
-      height: 100%;
-      @extend .grid-center;
-    }
+      "a a b b" 1fr
+      "a a b b" 1fr
+      "a a b b" 1fr;
 
     .about-pic {
+      @extend .grid-center;
+      height: 70%;
+      width: 50%;
+      overflow: hidden;
       grid-area: a;
-      background-color: gray;
-    }
-    .about-title {
-      grid-area: b;
-      background-color: yellow;
+
+      img {
+        height: auto;
+        width: 300px;
+        margin: 0px 20px 0px 20px;
+        border-radius: 10px;
+      }
     }
     .about-desc {
-      grid-area: c;
-      background-color: violet;
+      height: 60vh;
+      overflow-y: auto;
+      grid-area: b;
+      padding-right: 40px;
+
+      h2 {
+        width: 100%;
+        font-size: 2rem;
+        margin: 0px;
+        padding: 0px;
+        margin-top: 30px;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
     }
   }
 }

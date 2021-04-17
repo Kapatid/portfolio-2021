@@ -12,7 +12,7 @@ function Footer(props) {
       className="footer"
       style={{ ...props.customStyle, ...animation }}
     >
-      FOOTER
+      Did you liked what you saw?
     </animated.div>
   );
 }
