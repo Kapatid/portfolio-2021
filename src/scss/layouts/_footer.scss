@@ -1,2 +1,38 @@
 .footer {
+  height: 100vh;
+  width: 100%;
+  background-color: $light;
+  color: $dark;
+  position: absolute;
+  @extend .grid-center;
+
+  .container-footer {
+    height: 70vh;
+    width: 70%;
+    @extend .grid-center;
+    padding: 0;
+    row-gap: 0;
+    position: relative;
+    text-align: center;
+
+    h2,
+    .footer-links {
+      position: absolute;
+    }
+
+    .footer-links {
+      a {
+        color: $dark;
+      }
+    }
+
+    .footer-credit {
+      color: #3535357e;
+      margin-top: 75vh;
+
+      @include media-max($xs) {
+        margin-top: 70vh;
+      }
+    }
+  }
 }

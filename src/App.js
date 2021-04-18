@@ -25,7 +25,9 @@ function App() {
         changePage={changePage}
         setPrevPage={setPrevPage}
         prevPage={page}
+        animValues={["1vw", "4vw"]}
       />
+
       {page === "header" && <Header customStyle={front} />}
       {prevPage === "header" ? (
         <Header customStyle={back} />

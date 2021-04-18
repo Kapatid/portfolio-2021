@@ -19,7 +19,7 @@ function Projects(props) {
       className="projects"
       style={{ ...props.customStyle, ...animation }}
     >
-      <h1>PROJECTS</h1>
+      <h1 style={{ marginTop: "5rem" }}>PROJECTS</h1>
       <div className="container-proj">
         <div className="proj-vid">
           <video controls loop muted>
@@ -29,8 +29,7 @@ function Projects(props) {
         <div className="proj-desc">
           <p>
             <b>Title: </b> Interactive Infographic
-          </p>{" "}
-          <br />
+          </p>
           <p>
             <b>Description: </b>A project about countries in the ASEAN union. It
             aims to show information about a country with visuals that will

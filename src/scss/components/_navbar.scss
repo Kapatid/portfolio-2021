@@ -1,12 +1,13 @@
 .nav {
   position: absolute;
   z-index: 10;
-  right: 80px;
+  right: 4vw;
+  top: 35%;
   color: $light;
   font-size: 0.8rem;
 
   @extend .grid-center;
-  
+
   &.dark {
     color: $dark;
     .btn-prev {

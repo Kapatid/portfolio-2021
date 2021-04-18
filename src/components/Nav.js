@@ -5,8 +5,8 @@ function Nav(props) {
   const [count, setCount] = useState(0);
   const pages = ["header", "about", "projects", "footer"];
   const animation = useSpring({
-    to: { right: "80px", opacity: 1 },
-    from: { right: "0px", opacity: 0 },
+    from: { right: props.animValues[0], opacity: 0 },
+    to: { right: props.animValues[1], opacity: 1 },
     delay: 1000,
   });
 

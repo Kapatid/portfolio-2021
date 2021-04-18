@@ -35,6 +35,7 @@ function About(props) {
         </Splide>
         <div className="about-desc">
           <h2>Who am I?</h2>
+          <br />
           <p>
             I was born and raised in the Philippines and grew up loving tech
             related media, devices, and at some point I changed my lifestyle to
@@ -50,6 +51,10 @@ function About(props) {
             Unity. It was at college that I start to develop web apps and not
             regret a single thing about it because I learned a lot especially
             the best practices when coding.
+          </p>
+          <br />
+          <p>
+            <b>Likes: </b> Visual Studio Code, gym, food, coding, and dogs.
           </p>
         </div>
       </div>

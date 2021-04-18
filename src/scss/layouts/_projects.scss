@@ -17,7 +17,7 @@
     @include media-max($xs) {
       margin-top: 30px;
       height: 90vh;
-      width: 100%;
+      width: 80%;
       height: 100vh;
     }
 
@@ -25,13 +25,11 @@
       padding-bottom: 70px;
     }
 
+    p:last-of-type {
+      padding-top: 1rem;
+    }
+
     @extend .grid-center;
-    gap: 0px 5px;
-    grid-template:
-      "a a a a" 0.5fr
-      "b b b b" 0.2fr
-      "c c c c" 1.8fr
-      "d d d d" 1fr;
 
     .proj-desc,
     .proj-tech,
@@ -46,7 +44,6 @@
 
     .proj-vid {
       width: 60%;
-      grid-area: a;
 
       @include media-max($xs) {
         width: 90%;
@@ -58,12 +55,9 @@
       }
     }
     .proj-desc {
-      grid-area: b;
       display: grid;
     }
     .proj-tech {
-      grid-area: c;
-
       .tech {
         cursor: pointer;
         height: fit-content;
@@ -125,7 +119,6 @@
       }
     }
     .proj-github {
-      grid-area: d;
       mark {
         padding: 0px 6px 0px 6px;
       }

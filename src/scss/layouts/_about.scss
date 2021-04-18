@@ -17,6 +17,13 @@
       "a a b b" 1fr
       "a a b b" 1fr;
 
+    @include media-max($xs) {
+      grid-template:
+        "a a" 1fr
+        "b b" 1fr
+        "b b" 1fr;
+    }
+
     .about-pic {
       @extend .grid-center;
       height: 70%;
@@ -24,11 +31,25 @@
       overflow: hidden;
       grid-area: a;
 
+      @include media-max($xs) {
+        height: 50%;
+        width: 30%;
+      }
+
       img {
         height: auto;
         width: 300px;
         margin: 0px 20px 0px 20px;
         border-radius: 10px;
+
+        @include media-max($xs) {
+          width: 100px;
+          margin-top: 30px;
+
+          &:last-of-type {
+            margin-bottom: 100px;
+          }
+        }
       }
     }
     .about-desc {
@@ -36,6 +57,10 @@
       overflow-y: auto;
       grid-area: b;
       padding-right: 40px;
+
+      @include media-max($xs) {
+        margin-top: 30px;
+      }
 
       h2 {
         width: 100%;
