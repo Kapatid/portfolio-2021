@@ -10,8 +10,8 @@ import Video6 from "../video/projects/Portfolio 2021.mp4";
 
 function Projects(props) {
   const animation = useSpring({
-    to: { marginBottom: "0px" },
-    from: { marginBottom: "100%" },
+    from: { bottom: "100vh" },
+    to: { bottom: "0vh" },
   });
 
   return (

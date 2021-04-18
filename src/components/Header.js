@@ -3,8 +3,8 @@ import { useTrail, useSpring, animated, config } from "react-spring";
 
 function Header(props) {
   const animation = useSpring({
-    to: { marginBottom: "0px" },
-    from: { marginBottom: "100%" },
+    from: { bottom: "100vh" },
+    to: { bottom: "0vh" },
   });
 
   const helloTxt = useSpring({
@@ -54,7 +54,7 @@ function Header(props) {
   return (
     <animated.div
       className="header"
-      style={{ ...props.customStyle, ...animation, overflow: "visible" }}
+      style={{ ...props.customStyle, ...animation }}
     >
       <div className="p1" style={{}}>
         <animated.span style={helloTxt}>Hello! </animated.span>

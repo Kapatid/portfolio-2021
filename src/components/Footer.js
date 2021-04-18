@@ -11,8 +11,8 @@ function Footer(props) {
   };
 
   const animation = useSpring({
-    to: { marginBottom: "0px" },
-    from: { marginBottom: "100%" },
+    from: { bottom: "100vh" },
+    to: { bottom: "0vh" },
   });
 
   const headerAnim = useSpring({
@@ -39,7 +39,7 @@ function Footer(props) {
         Contact me: <br />
         nadji.tan@ciit.edu.ph |{" "}
         <a
-          href="https://github.com/Kapatid/interactive-infographic"
+          href="https://github.com/Kapatid"
           target="_blank"
           rel="noopener noreferrer"
         >
