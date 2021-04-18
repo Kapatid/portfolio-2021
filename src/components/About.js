@@ -54,7 +54,7 @@ function About(props) {
           </p>
           <br />
           <p>
-            <b>Likes: </b> Visual Studio Code, gym, food, coding, and dogs.
+            <b>Likes: </b> Visual Studio Code, gym, cooking, coding, and dogs.
           </p>
         </div>
       </div>
