@@ -42,13 +42,13 @@ function About(props) {
             have better physical health. As to how I begun in wanting to learn
             more about web/software development is quite simple, I used to play
             a lot of games and as I delved into the deep parts of the web I saw
-            those people who had a passion I am not familliar with and it was
-            not even popular at that time. <br /> <br /> As time pass by and a
+            those people who had a passion I am not familiar with and it was not
+            even popular at that time. <br /> <br /> As time passess by and a
             lot of reading and watching videos on the web about programming I
             came to realize why not make it my profession? My first introduction
             to programming was of course about video games but there was only
             one game that I was a proud of but it was very simple and made in
-            Unity. It was at college that I start to develop web apps and not
+            Unity. It was in college that I start to develop web apps and not
             regret a single thing about it because I learned a lot especially
             the best practices when coding.
           </p>

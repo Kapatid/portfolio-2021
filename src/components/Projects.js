@@ -22,7 +22,7 @@ function Projects(props) {
       <h1 style={{ marginTop: "5rem" }}>PROJECTS</h1>
       <div className="container-proj">
         <div className="proj-vid">
-          <video controls loop muted>
+          <video controls loop muted className="vid1">
             <source src={Video1} type="video/webm" />
           </video>
         </div>
@@ -154,10 +154,10 @@ function Projects(props) {
             <b>Description: </b>One of my first project when I was still
             learning web development but I had fun styling it and using
             JavaScript. The accounts where stored in the local storage of the
-            web browser and all of the games where made by me and the
-            text-adventure game was written by my partner during the developemnt
-            of it in school and it was a terminal/console game at first but I
-            thought of transferring it to html and learned a lot.
+            web browser and all of the games where made by me while the story of
+            the text-adventure game was written by my partner and I coded it. It
+            was a terminal/console game at first but I thought of transferring
+            it to html and learned a lot.
           </p>
         </div>
         <div className="proj-tech">
@@ -211,7 +211,7 @@ function Projects(props) {
 
       <div className="container-proj">
         <div className="proj-vid">
-          <video controls loop muted>
+          <video controls loop muted className="vid2">
             <source src={Video6} type="video/mp4" />
           </video>
         </div>

@@ -52,6 +52,21 @@
       video {
         width: 100%;
         height: auto;
+
+        @include media-max($xs) {
+          width: 90%;
+        }
+      }
+
+      .vid1 {
+        @include media-max($xs) {
+          width: 75%;
+        }
+      }
+      .vid2 {
+        @include media-max($xs) {
+          width: 75%;
+        }
       }
     }
     .proj-desc {
@@ -122,13 +137,11 @@
       mark {
         padding: 0px 6px 0px 6px;
       }
-    }
-  }
 
-  .proj-divider {
-    height: 0.5px;
-    width: 62%;
-    margin-top: 3rem;
-    background-color: rgba(0, 0, 0, 0.123);
+      @include media-max($xs) {
+        width: 50%;
+        justify-self: start;
+      }
+    }
   }
 }

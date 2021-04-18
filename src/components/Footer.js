@@ -64,7 +64,7 @@ function Footer(props) {
     >
       <div className="container-footer">
         <animated.h2 style={headerAnim}>
-          Did you liked what you saw?
+          Do you like what you see?
         </animated.h2>
 
         <Break

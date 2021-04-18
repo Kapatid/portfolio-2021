@@ -54,7 +54,7 @@ function Header(props) {
   return (
     <animated.div
       className="header"
-      style={{ ...props.customStyle, ...animation }}
+      style={{ ...props.customStyle, ...animation, overflow: "visible" }}
     >
       <div className="p1" style={{}}>
         <animated.span style={helloTxt}>Hello! </animated.span>
